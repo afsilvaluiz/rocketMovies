@@ -1,22 +1,31 @@
 import { createGlobalStyle } from "styled-components";
 
-export default createGlobalStyle `
-  * {
-    margin: 0;
-    padding: 0;
+export default createGlobalStyle`
+  :root {
+    font-size: 62,5%;
+  }
+
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
   }
 
-  body {
-    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_1000};
-    color: ${({ theme }) => theme.COLORS.WHITE};
+  * {
+    margin: 0;
+    padding: 0;
+  }
 
-    -webkit-font-smoothing: antialiased;
+  body {
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+    color: ${({ theme }) => theme.COLORS.WHITE};
   }
 
   body, input, button, textarea {
+    font-size: 1rem;
     font-family: 'Roboto Slab', serif;
-    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     outline: none;
   }
 
@@ -33,9 +42,29 @@ export default createGlobalStyle `
     filter: brightness(0.9);
   }
 
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
 
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
 
+  ::-webkit-scrollbar-thumb {
+    border-radius: .8rem;
+    background-color: ${({ theme }) => theme.COLORS.PINK_900};
+  }
 
-
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
 `
 
