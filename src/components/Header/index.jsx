@@ -1,4 +1,4 @@
-import { Container, Brand, Profile } from './style'
+import { Container, Brand, Profile } from './styles'
 
 import { Input } from '../Input'
 
