@@ -1,4 +1,6 @@
-import { Container, Brand, Profile, Logout } from './style'
+import { Container, Brand, Profile } from './style'
+
+import { Input } from '../Input'
 
 export function Header() {
   return (
@@ -7,13 +9,12 @@ export function Header() {
         <h1>RocketMovies</h1>
       </Brand>
 
-      {/*
-      <Search></Search>
-      */}
+      <Input type="search" placeholder="Search by title" />
 
       <Profile>
         <div>
           <strong>Luiz Silva</strong>
+          <button>Logout</button>
         </div>
 
         <img src="https://github.com/afsilvaluiz.png"
@@ -21,7 +22,6 @@ export function Header() {
         />
       </Profile>
 
-      <Logout>Logout</Logout>
     </Container>
   )
 }
