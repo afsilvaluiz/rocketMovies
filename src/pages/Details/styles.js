@@ -11,6 +11,12 @@ export const Container = styled.div`
   "content";
   grid-template-rows: 11.6rem 8.5rem auto;
 
+   > button:last-of-type {
+      color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+    }
+
+
+
 
 `
 
