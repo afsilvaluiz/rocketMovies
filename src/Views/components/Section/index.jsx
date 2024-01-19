@@ -1,4 +1,4 @@
-import { Container } from "./style";
+import { Container } from './style';
 
 export function Section({ title, children }) {
   return (
