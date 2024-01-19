@@ -1,15 +1,15 @@
-import { Input } from "../Input";
+import { Input } from '../Input';
 
-import { Container, Profile } from "./styles";
+import { Container, Profile } from './styles';
 
 export function Header() {
   return (
     <Container>
-      <a href="#">
+      <a href='#'>
         <h1>RocketMovies</h1>
       </a>
 
-      <Input type="search" placeholder="Search by title" />
+      <Input type='search' placeholder='Search by title' />
 
       <Profile>
         <div>
@@ -17,7 +17,7 @@ export function Header() {
           <button>Logout</button>
         </div>
 
-        <img src="https://github.com/afsilvaluiz.png" alt="Profile image" />
+        <img src='https://github.com/afsilvaluiz.png' alt='Profile image' />
       </Profile>
     </Container>
   );
