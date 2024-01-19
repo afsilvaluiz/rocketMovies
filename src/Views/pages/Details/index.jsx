@@ -13,11 +13,11 @@ export function Details() {
       <Header readerOnly />
 
       <div>
-        <a href="#">
-          <ButtonText icon={FiArrowLeft} title="Back" />
+        <a href='#'>
+          <ButtonText icon={FiArrowLeft} title='Back' />
         </a>
 
-        <ButtonText icon={FiDelete} title="Delete Movie" />
+        <ButtonText icon={FiDelete} title='Delete Movie' />
       </div>
       <main>
         <Content>
@@ -29,8 +29,8 @@ export function Details() {
             </div>
             <div>
               <img
-                src="https://github.com/afsilvaluiz.png"
-                alt="Profile image"
+                src='https://github.com/afsilvaluiz.png'
+                alt='Profile image'
               />
 
               <span>By Luiz Silva</span>
@@ -42,8 +42,8 @@ export function Details() {
           </header>
 
           <div>
-            <Tag title="Drama" />
-            <Tag title="Science fiction" />
+            <Tag title='Drama' />
+            <Tag title='Science fiction' />
           </div>
 
           <article>
