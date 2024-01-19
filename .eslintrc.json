@@ -4,7 +4,6 @@
     "browser": true,
     "es2022": true
   },
-
   "extends": [
     "eslint:recommended",
     "plugin:import/recommended",
@@ -15,17 +14,14 @@
     "plugin:react-hooks/recommended",
     "plugin:prettier/recommended"
   ],
-
   "ignorePatterns": [
     "dist",
     ".eslintrc.cjs"
   ],
-
   "parserOptions": {
     "ecmaVersion": 2022, //
     "sourceType": "module"
   },
-
   "settings": {
     "import/resolver": {
       "node": {
@@ -36,12 +32,11 @@
       }
     }
   },
-
   "plugins": [
+    "react",
     "react-refresh",
     "prettier"
   ],
-
   "rules": {
     "prettier/prettier": "error",
     "import/no-named-as-default": 0,
@@ -51,7 +46,6 @@
         "allowConstantExport": true
       }
     ],
-
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -60,7 +54,6 @@
         "jsx": "never"
       }
     ],
-
     "react/prop-types": [
       "error",
       {
@@ -73,7 +66,6 @@
         "skipUndeclared": true
       }
     ],
-
     "import/order": [
       "error",
       {
