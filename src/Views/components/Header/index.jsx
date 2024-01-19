@@ -1,6 +1,6 @@
-import { Input } from '../Input';
+import { Input } from "../Input";
 
-import { Container, Profile } from './styles';
+import { Container, Profile } from "./styles";
 
 export function Header() {
   return (
