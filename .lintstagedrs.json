@@ -1,5 +1,5 @@
 {
   "*.{js,jsx}":[
-    "prettier src --write"
+    "prettier src --fix"
   ]
 }
