@@ -1,7 +1,8 @@
-import { Container } from "./styles";
 import { FiStar } from "react-icons/fi";
 
-export function Stars({ className }) {
+import { Container } from "./styles";
+
+export function Stars() {
   return (
     <Container>
       <li className="bg">
