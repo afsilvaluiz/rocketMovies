@@ -1,5 +1,5 @@
-import { Container } from './styles';
-import { FiStar } from 'react-icons/fi';
+import { Container } from "./styles";
+import { FiStar } from "react-icons/fi";
 
 export function Stars({ className }) {
   return (

@@ -1,11 +1,11 @@
-import { FiArrowLeft, FiClock, FiDelete } from 'react-icons/fi';
+import { FiArrowLeft, FiClock, FiDelete } from "react-icons/fi";
 
-import { ButtonText } from '../../components/ButtonText';
-import { Header } from '../../components/Header';
-import { Stars } from '../../components/Stars';
-import { Tag } from '../../components/Tag';
+import { ButtonText } from "../../components/ButtonText";
+import { Header } from "../../components/Header";
+import { Stars } from "../../components/Stars";
+import { Tag } from "../../components/Tag";
 
-import { Container, Content } from './styles';
+import { Container, Content } from "./styles";
 
 export function Details() {
   return (

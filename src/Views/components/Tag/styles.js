@@ -1,8 +1,8 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.span`
   font-size: 0.75rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 
   padding: 0.313rem 0.875rem;
   margin-right: 0.375rem;
