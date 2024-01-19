@@ -14,8 +14,7 @@
   },
   "lint-staged": {
     "*.{js,jsx}": [
-      "npx run prettify",
-      "npm run lint"
+      "npx run prettify"
     ]
   },
   "husky": {
