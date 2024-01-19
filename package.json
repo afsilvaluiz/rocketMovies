@@ -8,7 +8,19 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "prettify": "prettier --write \"**/*.{js,jsx}\""
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "npm run prettify"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+
   },
   "dependencies": {
     "eslint-config-prettier": "^9.1.0",
