@@ -1,27 +1,24 @@
-import { Container, Brand, Profile } from './styles'
+import { Input } from '../Input';
 
-import { Input } from '../Input'
+import { Container, Profile } from './styles';
 
 export function Header() {
   return (
     <Container>
-      <Brand>
+      <a href="#">
         <h1>RocketMovies</h1>
-      </Brand>
+      </a>
 
       <Input type="search" placeholder="Search by title" />
 
       <Profile>
         <div>
-          <strong>Luiz Silva</strong>
+          <p>Luiz Silva</p>
           <button>Logout</button>
         </div>
 
-        <img src="https://github.com/afsilvaluiz.png"
-          alt="Profile image"
-        />
+        <img src="https://github.com/afsilvaluiz.png" alt="Profile image" />
       </Profile>
-
     </Container>
-  )
+  );
 }

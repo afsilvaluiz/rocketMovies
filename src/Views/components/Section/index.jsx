@@ -1,10 +1,10 @@
-import { Container } from './style'
+import { Container } from './style';
 
 export function Section({ title, children }) {
-  return(
+  return (
     <Container>
-      <h2>{title}</h2>
+      <h1>{title}</h1>
       {children}
     </Container>
-  )
+  );
 }

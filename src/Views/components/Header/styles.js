@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.header`
   grid-area: header;
@@ -20,7 +20,7 @@ export const Container = styled.header`
       display: none;
     }
   }
-`
+`;
 export const Brand = styled.div`
   width: 10.25rem;
   display: flex;
@@ -34,7 +34,7 @@ export const Brand = styled.div`
     color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
     font-weight: 700;
   }
-`
+`;
 export const Profile = styled.div`
   justify-self: end;
 
@@ -46,7 +46,7 @@ export const Profile = styled.div`
   transition: filter 0.2s;
   &:hover {
     filter: brightness(0.9);
-  };
+  }
 
   > img {
     width: 4rem;
@@ -70,6 +70,8 @@ export const Profile = styled.div`
     }
 
     button {
+      display: flex;
+      justify-content: space-;
       background-color: transparent;
       border: none;
       font-size: 0.875rem;
@@ -80,7 +82,5 @@ export const Profile = styled.div`
     button:hover {
       text-decoration: underline;
     }
-
   }
-`
-
+`;

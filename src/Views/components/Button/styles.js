@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Container = styled.button`
   width: 100%;
@@ -9,12 +9,10 @@ export const Container = styled.button`
   border: 0;
   padding: 0 1rem;
   margin-top: 1rem;
-  border-radius: .625rem;
+  border-radius: 0.625rem;
   font-weight: 500;
 
   &:disabled {
     opacity: 0.5;
   }
-`
-
-
+`;

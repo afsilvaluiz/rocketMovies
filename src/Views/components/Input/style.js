@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
@@ -14,7 +14,7 @@ export const Container = styled.div`
     height: 3.5rem;
     width: 100%;
 
-    padding: 1.188rem 1.5rem ;
+    padding: 1.188rem 1.5rem;
 
     color: ${({ theme }) => theme.COLORS.WHITE};
     background: transparent;
@@ -30,9 +30,6 @@ export const Container = styled.div`
   }
 
   svg {
-  margin-left: 16px;
-}
-
-
-
-`
+    margin-left: 16px;
+  }
+`;
