@@ -9,8 +9,8 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "prepare": "husky install",
-    "prettify": "prettier --write \"**/*.{js,jsx}\"",
-    "prettify-check": "prettier --check \"**/*.{js,jsx}\""
+    "prettify": "prettier src --write \"**/*.{js,jsx}\"",
+    "prettify-check": "prettier src --check \"**/*.{js,jsx}\""
   },
   "lint-staged": {
     "*.{js,jsx}": [
