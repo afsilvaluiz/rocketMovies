@@ -29,6 +29,9 @@ export function Details() {
               <h1>Interestellar</h1>
               <Stars />
               <Stars />
+              <Stars />
+              <Stars />
+              <Stars />
             </div>
 
             <div className='movie-info'>

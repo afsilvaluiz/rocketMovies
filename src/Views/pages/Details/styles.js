@@ -11,10 +11,12 @@ export const Container = styled.div`
   grid-template-rows: 9.6rem auto;
 
   > main {
+    grid-area: content;
     overflow-y: auto;
-    width: min(90%, 113.7rem);
+
+    width: 100%;
+    max-width: 95rem;
     margin: 0 auto;
-    padding-right: 1.6rem;
   }
 `;
 
@@ -55,33 +57,34 @@ export const Content = styled.div`
 
     > div:first-of-type {
       align-items: center;
-      margin-bottom: 2.4rem;
-      gap: 1rem;
+      gap: 0.5rem;
 
       > h1 {
+        padding-right: 1rem;
         font-size: 2.25rem;
         font-weight: 500;
       }
     }
-
     .movie-info {
       gap: 0.8rem;
-      margin-bottom: 2rem;
+      margin: 2rem 0rem;
 
-      > img {
+      p:nth-child(1),
+      div {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+      }
+
+      img {
         width: 1.6rem;
         height: 1.6rem;
         border-radius: 50%;
       }
 
-      span {
-        font-size: 1rem;
-        font-family: 'Roboto', sans-serif;
+      svg {
+        color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
       }
-    }
-
-    svg {
-      color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
     }
   }
 
