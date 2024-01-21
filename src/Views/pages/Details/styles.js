@@ -1,33 +1,15 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  width: 100%;
   height: 100vh;
 
   display: grid;
   grid-template-areas:
     'header'
-    'div'
     'content';
-  grid-template-rows: 11.6rem 8.5rem auto;
+  grid-template-rows: 9.6rem auto;
 
-  > div {
-    grid-area: div;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: min(90%, 113.7rem);
-    margin: 0 auto;
-
-    > a {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    > button:last-of-type {
-      color: ${({ theme }) => theme.COLORS.ROSE};
-    }
-  }
   > main {
     overflow-y: auto;
     width: min(90%, 113.7rem);
@@ -37,54 +19,76 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  grid-area: content;
-  margin: 0 auto 4rem;
+  max-width: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
 
   > header {
-    margin-bottom: 2.4rem;
+    > div:first-of-type {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      margin-bottom: 2.4rem;
+      align-items: center;
 
-    > div {
+      > button:last-of-type {
+        align-self: auto;
+        color: ${({ theme }) => theme.COLORS.ROSE};
+
+        svg {
+          color: ${({ theme }) => theme.COLORS.ROSE};
+        }
+      }
+    }
+  }
+
+  > section {
+    display: flex;
+    flex-direction: column;
+
+    div {
       display: flex;
       align-items: center;
     }
 
     > div:first-of-type {
-      gap: 1rem;
+      align-items: center;
       margin-bottom: 2.4rem;
+      gap: 1rem;
 
-      h1 {
+      > h1 {
         font-size: 2.25rem;
         font-weight: 500;
       }
-
-      svg {
-        width: 1.25rem;
-        height: 1.25rem;
-      }
     }
 
-    > div:last-of-type {
+    .movie-info {
       gap: 0.8rem;
-      img {
+      margin-bottom: 2rem;
+
+      > img {
         width: 1.6rem;
         height: 1.6rem;
         border-radius: 50%;
       }
-    }
-    span {
-      font-size: 1rem;
-      font-family: 'Roboto', sans-serif;
+
+      span {
+        font-size: 1rem;
+        font-family: 'Roboto', sans-serif;
+      }
     }
 
     svg {
       color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
     }
-    @media (max-width: 400px) {
-      > div:first-of-type {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
+  }
+
+  article p {
+    font-size: 1rem;
+    text-align: justify;
+    line-height: auto;
   }
 
   > div:not(:empty) {
@@ -93,17 +97,6 @@ export const Content = styled.div`
     height: 4rem;
     ::-webkit-scrollbar {
       height: 5px;
-    }
-  }
-
-  > article {
-    margin-top: 4rem;
-
-    p {
-      font-size: 1rem;
-      text-align: justify;
-      line-height: auto;
-      margin-bottom: 2.4rem;
     }
   }
 `;

@@ -12,34 +12,41 @@ export function Details() {
     <Container>
       <Header readerOnly />
 
-      <div>
-        <a href='#'>
-          <ButtonText icon={FiArrowLeft} title='Back' />
-        </a>
-
-        <ButtonText icon={FiDelete} title='Delete Movie' />
-      </div>
       <main>
         <Content>
           <header>
             <div>
-              <h1>Interestellar</h1>
+              <a href='#'>
+                <ButtonText icon={FiArrowLeft} title='Back' />
+              </a>
 
-              <Stars />
-            </div>
-            <div>
-              <img
-                src='https://github.com/afsilvaluiz.png'
-                alt='Profile image'
-              />
-
-              <span>By Luiz Silva</span>
-
-              <FiClock />
-
-              <span>18/01/24 às 13:00</span>
+              <ButtonText icon={FiDelete} title='Delete Movie' />
             </div>
           </header>
+
+          <section>
+            <div>
+              <h1>Interestellar</h1>
+              <Stars />
+              <Stars />
+            </div>
+
+            <div className='movie-info'>
+              <p>
+                <img
+                  src='https://github.com/afsilvaluiz.png'
+                  alt='Profile image'
+                />
+                By Luiz Silva
+              </p>
+
+              <div>
+                <FiClock />
+
+                <p>18/01/24 às 13:00</p>
+              </div>
+            </div>
+          </section>
 
           <div>
             <Tag title='Drama' />
