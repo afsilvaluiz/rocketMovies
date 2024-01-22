@@ -3,39 +3,30 @@ import styled from 'styled-components';
 export const Container = styled.header`
   grid-area: header;
 
-  height: 7.25rem;
+  height: 6.563rem;
   width: 100%;
 
   align-items: center;
   display: flex;
   justify-content: space-between;
 
-  padding: 0 12.3rem;
-
-  grid-template-columns: 1fr 2fr 1fr;
-
-  position: relative;
+  padding: 0 7.688rem;
 
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_1000};
   border-bottom: 1px solid ${({ theme }) => theme.COLORS.STROKE};
-`;
 
-export const Brand = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  > div:first-of-type {
+    > a h1 {
+      font-size: 1.5rem;
 
-  > a > h1 {
-    font-size: 2rem;
-    color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
-    font-weight: 700;
+      color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+    }
   }
 `;
 
 export const Profile = styled.div`
   display: flex;
   align-items: center;
-  gap: 0.563rem;
 
   > img {
     width: 4rem;
@@ -44,11 +35,11 @@ export const Profile = styled.div`
   }
 
   > div {
-    margin-right: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+    line-height: 1.5rem;
     font-size: 1rem;
-    line-height: 1.8rem;
-
-    height: 3rem;
 
     strong {
       color: ${({ theme }) => theme.COLORS.WHITE};
@@ -60,14 +51,11 @@ export const Logout = styled.button`
   border: none;
   background: none;
 
+  margin-right: 2rem;
+
   color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
 
   font-size: 0.875rem;
-  line-height: 1rem;
-
-  position: absolute;
-  bottom: 2.4rem;
-  right: 17.6rem;
 
   &:hover {
     text-decoration: underline;
