@@ -2,7 +2,9 @@ import styled from 'styled-components';
 
 export const Container = styled.ul`
   display: flex;
-  gap: 1rem;
+
+  font-size: 1.25rem;
+  margin-right: 0.625rem;
   align-items: center;
 
   line-height: 0;

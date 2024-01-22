@@ -10,7 +10,7 @@ export const Container = styled.header`
   display: flex;
   justify-content: space-between;
 
-  padding: 0 7.688rem;
+  padding: 0 7.6875rem;
 
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_1000};
   border-bottom: 1px solid ${({ theme }) => theme.COLORS.STROKE};

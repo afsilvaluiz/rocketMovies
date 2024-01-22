@@ -61,6 +61,18 @@ export function Details() {
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni
               accusamus excepturi odit totam numquam dolore architecto,
               molestiae temporibus, dignissimos, expedita fugit veritatis soluta
+              accusantium consectetur placeat? Itaque illo harum dolor. Lorem
+              ipsum dolor, sit amet consectetur adipisicing elit. Magni
+              accusamus excepturi odit totam numquam dolore architecto,
+              molestiae temporibus, dignissimos, expedita fugit veritatis soluta
+              accusantium consectetur placeat? Itaque illo harum dolor. Lorem
+              ipsum dolor, sit amet consectetur adipisicing elit. Magni
+              accusamus excepturi odit totam numquam dolore architecto,
+              molestiae temporibus, dignissimos, expedita fugit veritatis soluta
+              accusantium consectetur placeat? Itaque illo harum dolor. Lorem
+              ipsum dolor, sit amet consectetur adipisicing elit. Magni
+              accusamus excepturi odit totam numquam dolore architecto,
+              molestiae temporibus, dignissimos, expedita fugit veritatis soluta
               accusantium consectetur placeat? Itaque illo harum dolor.
             </p>
           </article>
