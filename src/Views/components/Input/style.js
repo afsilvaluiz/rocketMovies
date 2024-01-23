@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 43rem;
+  width: 100%;
   display: flex;
   align-items: center;
 
@@ -14,7 +14,7 @@ export const Container = styled.div`
     height: 3.5rem;
     width: 100%;
 
-    padding: 1.875rem 1.5rem;
+    padding: 1.1875rem 1.5rem 1.1875rem 0.8rem;
 
     color: ${({ theme }) => theme.COLORS.WHITE};
     background: transparent;
@@ -28,8 +28,8 @@ export const Container = styled.div`
       cursor: not-allowed;
     }
   }
-
   svg {
-    margin-left: 16px;
+    margin-left: 1rem;
+    color: ${({ theme }) => theme.COLORS.GRAY_100};
   }
 `;
