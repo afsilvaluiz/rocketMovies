@@ -18,6 +18,7 @@ export const Container = styled.header`
   > div:first-of-type {
     > a h1 {
       font-size: 1.5rem;
+      padding-right: 4rem;
 
       color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
     }
@@ -38,6 +39,7 @@ export const Profile = styled.div`
     display: flex;
     flex-direction: column;
     margin-right: 1rem;
+    padding-left: 4rem;
     line-height: 1.5rem;
     font-size: 1rem;
 
