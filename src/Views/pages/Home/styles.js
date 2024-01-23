@@ -13,9 +13,10 @@ export const Container = styled.div`
   > main {
     grid-area: content;
     width: 100%;
+    overflow-y: auto;
   }
 
-  header {
+  .myMovie {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,7 +32,6 @@ export const Container = styled.div`
 export const Content = styled.div`
   grid-area: content;
   max-width: calc(100% - 1rem);
-  overflow-y: auto;
 
   padding: 0 7.688rem;
 
@@ -42,7 +42,25 @@ export const Content = styled.div`
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: ${({ theme }) => theme.COLORS.PINK};
+    background-color: ${({ theme }) => theme.COLORS.ROSE};
     border-radius: 0.8rem;
   }
+`;
+
+export const NewMovie = styled.button`
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+  color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.5rem;
+
+  width: 12.938rem;
+  height: 3rem;
+
+  padding: 2rem;
+  border-radius: 0.5rem;
 `;

@@ -3,9 +3,9 @@ import { Tag } from '../Tag';
 
 import { Container } from './styles';
 
-export function Movies() {
+export function Movies({ data, ...rest }) {
   return (
-    <Container>
+    <Container {...rest}>
       <h1>Interestellar</h1>
 
       <Stars />
@@ -17,10 +17,13 @@ export function Movies() {
         debitis at quas.
       </p>
 
-      <footer>
-        <Tag title='Drama' />
-        <Tag title='Science fiction' />
-      </footer>
+      {data.tags && (
+        <footer>
+          {data.tags.map((tag) => (
+            <Tag key={tag.id} title={tag.name} />
+          ))}
+        </footer>
+      )}
     </Container>
   );
 }

@@ -3,7 +3,7 @@ import { FiPlus } from 'react-icons/fi';
 import { Header } from '../../components/Header';
 import { Movies } from '../../components/Movies';
 
-import { Container, Content } from './styles';
+import { Container, Content, NewMovie } from './styles';
 
 export function Home() {
   return (
@@ -11,14 +11,42 @@ export function Home() {
       <Header readerOnly />
 
       <main>
-        <header>
+        <header className='myMovie'>
           <h1>My Movies</h1>
-          {/* New Movie -- page */}
-          <FiPlus />
-          Add Movie
+
+          <NewMovie>
+            <FiPlus />
+            Add Movie
+          </NewMovie>
         </header>
         <Content>
-          <Movies />
+          <Movies
+            data={{
+              title: 'Drama',
+              tags: [
+                { id: '1', name: 'drama' },
+                { id: '2', name: 'science fiction' },
+              ],
+            }}
+          />
+          <Movies
+            data={{
+              title: 'Drama',
+              tags: [
+                { id: '1', name: 'drama' },
+                { id: '2', name: 'science fiction' },
+              ],
+            }}
+          />
+          <Movies
+            data={{
+              title: 'Drama',
+              tags: [
+                { id: '1', name: 'drama' },
+                { id: '2', name: 'science fiction' },
+              ],
+            }}
+          />
         </Content>
       </main>
     </Container>
