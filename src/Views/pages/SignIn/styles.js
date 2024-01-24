@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import backgroundImg from '../../layouts/assets/signin.jpg';
+
 export const Container = styled.div`
   height: 100vh;
 
@@ -40,4 +42,12 @@ export const Form = styled.form`
     margin-top: 2.625rem;
     color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
   }
+`;
+
+export const Background = styled.div`
+  flex: 1;
+  background:
+    linear-gradient(to left, rgba(35, 33, 41, 0.5), rgba(35, 33, 41, 0.3)),
+    url(${backgroundImg}) no-repeat center;
+  background-size: cover;
 `;
