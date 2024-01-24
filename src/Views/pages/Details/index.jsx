@@ -23,7 +23,6 @@ export function Details() {
               <ButtonText icon={FiDelete} title='Delete Movie' />
             </div>
           </header>
-
           <section>
             <div>
               <h1>Interestellar</h1>
@@ -53,7 +52,7 @@ export function Details() {
 
           <div>
             <Tag title='Drama' />
-            <Tag title='Science fiction' />
+            <Tag title='Science Fiction' />
           </div>
 
           <article>
