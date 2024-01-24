@@ -47,7 +47,7 @@ export const Content = styled.div`
   }
 `;
 
-export const NewMovie = styled.button`
+export const AddMovie = styled.button`
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
   color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
   border: none;
