@@ -1,4 +1,4 @@
-import { FiUser, FiMail, FiLock } from 'react-icons/fi';
+import { FiUser, FiMail, FiLock, FiArrowLeft } from 'react-icons/fi';
 
 import { Button } from '../../components/Button';
 import { Input } from '../../components/Input';
@@ -22,7 +22,10 @@ export function SignUp() {
 
         <Button title='Sign Up' />
 
-        <a href='#'>Return to login</a>
+        <a href='#'>
+          <FiArrowLeft />
+          Return to login
+        </a>
       </Form>
 
       <Background />

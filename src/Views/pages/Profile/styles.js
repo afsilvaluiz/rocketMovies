@@ -18,6 +18,8 @@ export const Container = styled.div`
       display: flex;
       align-items: center;
 
+      line-height: 1rem;
+
       padding-left: 9rem;
       gap: 0.5rem;
       color: ${({ theme }) => theme.COLORS.BACKGROUND_700};

@@ -39,6 +39,12 @@ export const Form = styled.form`
   }
 
   > a {
+    display: flex;
+    align-items: center;
+
+    line-height: 1rem;
+
+    gap: 0.5rem;
     margin-top: 2.625rem;
     color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
   }
