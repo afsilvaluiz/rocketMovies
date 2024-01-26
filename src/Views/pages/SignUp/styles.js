@@ -38,6 +38,18 @@ export const Form = styled.form`
     margin-bottom: 3rem;
   }
 
+  div:nth-child(n + 2) {
+    margin-bottom: 0.5rem;
+  }
+
+  div:nth-child(6) {
+    margin-bottom: 0;
+  }
+
+  > button {
+    margin-top: 1.5rem;
+  }
+
   > a {
     display: flex;
     align-items: center;
