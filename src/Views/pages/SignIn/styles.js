@@ -38,6 +38,18 @@ export const Form = styled.form`
     margin-bottom: 3rem;
   }
 
+  div:nth-child(n + 1) {
+    margin-bottom: 0.5rem;
+  }
+
+  div:nth-child(5) {
+    margin-bottom: 0;
+  }
+
+  > button {
+    margin-top: 1.5rem;
+  }
+
   > a {
     margin-top: 2.625rem;
     color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
