@@ -6,7 +6,7 @@ import { Container } from './styles';
 export function Movies({ data, ...rest }) {
   return (
     <Container {...rest}>
-      <h1>{data.title}</h1>
+      <h1>Interestellar</h1>
 
       <Stars />
 
