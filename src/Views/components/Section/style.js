@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-  margin: 3.5rem 0 1.75rem;
+  margin: 2.5rem 0 2.5rem;
 
   > h1 {
     margin-bottom: 1.75rem;
