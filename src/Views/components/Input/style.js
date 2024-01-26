@@ -5,18 +5,16 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
 
-  margin-bottom: 0.5rem;
+  border-radius: 0.625rem;
 
   color: ${({ theme }) => theme.COLORS.WHITE};
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
 
-  border-radius: 0.625rem;
-
   > input {
-    height: 3.5rem;
+    height: 3.438rem;
     width: 100%;
 
-    padding: 1.1875rem 1.5rem 1.1875rem 0.8rem;
+    padding: 1.1875rem 0 1.1875rem 1.5rem;
 
     color: ${({ theme }) => theme.COLORS.WHITE};
     background: transparent;
