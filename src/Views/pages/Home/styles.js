@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -47,7 +48,7 @@ export const Content = styled.div`
   }
 `;
 
-export const AddMovie = styled.button`
+export const AddMovie = styled(Link)`
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
   color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
   border: none;
