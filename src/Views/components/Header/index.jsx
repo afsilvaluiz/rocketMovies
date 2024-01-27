@@ -1,4 +1,5 @@
 import { FiSearch } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
 import { Input } from '../Input';
 
@@ -8,14 +9,14 @@ export function Header() {
   return (
     <Container>
       <div>
-        <a href='#'>
+        <Link to='/'>
           <h1>RocketMovies</h1>
-        </a>
+        </Link>
       </div>
 
       <Input type='search' placeholder='Search by title' icon={FiSearch} />
 
-      <Profile>
+      <Profile to='profile'>
         <div>
           <strong>Luiz Silva</strong>
           <Logout>Logout</Logout>
