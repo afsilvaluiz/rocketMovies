@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { FiArrowLeft } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
@@ -12,6 +13,18 @@ import { Textarea } from '../../components/Textarea';
 import { Container, Form } from './styles';
 
 export function New() {
+  const [tags, setTags] = useState([]);
+  const [newTag, setNewTag] = useState('');
+
+  function handleAddTag() {
+    setTags((prevState) => [...prevState, newTag]);
+    setNewTag('');
+  }
+
+  function handleRemoveTag(deleted) {
+    setTags((prevState) => prevState.filter((tag) => tag !== deleted));
+  }
+
   return (
     <Container>
       <Header />
@@ -43,9 +56,23 @@ export function New() {
           <Section>
             <h2>Tags</h2>
             <div className='tags'>
-              <MoviesItem className='tag' value='Drama' />
+              {tags.map((tag, index) => (
+                <MoviesItem
+                  className='tag'
+                  key={String(index)}
+                  value={tag}
+                  onClick={() => handleRemoveTag(tag)}
+                />
+              ))}
 
-              <MoviesItem className='newTag' isNew placeholder='New tag' />
+              <MoviesItem
+                className='newTag'
+                isNew
+                placeholder='New tag'
+                onChange={(e) => setNewTag(e.target.value)}
+                value={newTag}
+                onClick={handleAddTag}
+              />
             </div>
           </Section>
 
