@@ -2,12 +2,18 @@ import { FiSearch } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
 import { useAuth } from '../../../App/hooks/auth';
+import { api } from '../../../App/services/api';
+import avatarPlaceholder from '../../layouts/assets/avatar_placeholder.svg';
 import { Input } from '../Input';
 
 import { Container, Profile, Logout } from './styles';
 
 export function Header() {
-  const { signOut } = useAuth();
+  const { signOut, user } = useAuth();
+
+  const avatarUrl = user.avatar
+    ? `${api.defaults.baseURL}/files/${user.avatar}`
+    : avatarPlaceholder;
 
   return (
     <Container>
@@ -21,10 +27,10 @@ export function Header() {
 
       <Profile>
         <div>
-          <strong>Luiz Silva</strong>
+          <strong>{user.name}</strong>
           <Logout onClick={signOut}>Logout</Logout>
         </div>
-        <img src='https://github.com/afsilvaluiz.png' alt='Profile image' />
+        <img src={avatarUrl} alt={user.name} />
       </Profile>
     </Container>
   );
