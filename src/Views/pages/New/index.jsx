@@ -33,6 +33,20 @@ export function New() {
   }
 
   async function handleNewMovie() {
+    if (!title) {
+      return alert("Enter the movie's name!");
+    }
+
+    const isRatingValid = rating >= 0 && rating <= 5;
+
+    if (!isRatingValid) {
+      return alert('Enter a rating between 0 and 5!');
+    }
+
+    if (newTag) {
+      return alert("There's a tag in the field, click 'Add' or leave it empty");
+    }
+
     await api.post('/movie_notes', {
       title,
       description,
