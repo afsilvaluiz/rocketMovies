@@ -17,11 +17,14 @@ export function New() {
   const [title, setTitle] = useState();
   const [rating, setRating] = useState();
   const [description, setDescription] = useState();
-
   const [tags, setTags] = useState([]);
   const [newTag, setNewTag] = useState('');
 
   const navigate = useNavigate();
+
+  function handleBack() {
+    navigate(-1);
+  }
 
   function handleAddTag() {
     setTags((prevState) => [...prevState, newTag]);
@@ -120,7 +123,7 @@ export function New() {
           </Section>
 
           <div className='saveChange'>
-            <Button title='Discard' />
+            <Button title='Discard' onClick={handleBack} />
 
             <Button title='Save' onClick={handleNewMovie} />
           </div>
