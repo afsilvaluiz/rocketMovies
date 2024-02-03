@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { FiArrowLeft } from 'react-icons/fi';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
+import { api } from '../../../App/services/api';
 import { Button } from '../../components/Button';
 import { ButtonText } from '../../components/ButtonText';
 import { Header } from '../../components/Header';
@@ -13,8 +14,14 @@ import { Textarea } from '../../components/Textarea';
 import { Container, Form } from './styles';
 
 export function New() {
+  const [title, setTitle] = useState();
+  const [rating, setRating] = useState();
+  const [description, setDescription] = useState();
+
   const [tags, setTags] = useState([]);
   const [newTag, setNewTag] = useState('');
+
+  const navigate = useNavigate();
 
   function handleAddTag() {
     setTags((prevState) => [...prevState, newTag]);
@@ -23,6 +30,18 @@ export function New() {
 
   function handleRemoveTag(deleted) {
     setTags((prevState) => prevState.filter((tag) => tag !== deleted));
+  }
+
+  async function handleNewMovie() {
+    await api.post('/movie_notes', {
+      title,
+      description,
+      rating,
+      tags,
+    });
+
+    alert('Movie added successfully!');
+    navigate('/');
   }
 
   return (
@@ -40,7 +59,12 @@ export function New() {
           </header>
 
           <div className='movieRating'>
-            <Input className='title' placeholder='Title' type='text' />
+            <Input
+              className='title'
+              placeholder='Title'
+              type='text'
+              onChange={(e) => setTitle(e.target.value)}
+            />
 
             <Input
               className='rating'
@@ -48,10 +72,15 @@ export function New() {
               type='number'
               min='0'
               max='5'
+              value={rating}
+              onChange={(e) => setRating(e.target.value)}
             />
           </div>
 
-          <Textarea placeholder='Comments' />
+          <Textarea
+            placeholder='Comments'
+            onChange={(e) => setDescription(e.target.value)}
+          />
 
           <Section>
             <h2>Tags</h2>
@@ -77,9 +106,9 @@ export function New() {
           </Section>
 
           <div className='saveChange'>
-            <Button title='Discard changes' />
+            <Button title='Discard' />
 
-            <Button title='Save changes' />
+            <Button title='Save' onClick={handleNewMovie} />
           </div>
         </Form>
       </main>
