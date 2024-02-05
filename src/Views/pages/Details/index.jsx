@@ -15,9 +15,7 @@ import { Container, Content } from './styles';
 
 export function Details() {
   const [data, setData] = useState(null);
-
   const params = useParams();
-
   const { user } = useAuth();
 
   const avatarUrl = user.avatar
@@ -34,6 +32,15 @@ export function Details() {
 
   function handleBack() {
     navigate('/');
+  }
+
+  async function handleRemove() {
+    const confirm = window.confirm('Do you really want to remove the movie?');
+
+    if (confirm) {
+      await api.delete(`/movie_notes/${params.id}`);
+      navigate('/');
+    }
   }
 
   useEffect(() => {
@@ -53,11 +60,19 @@ export function Details() {
           <Content>
             <header>
               <div>
-                <a onClick={handleBack}>
-                  <ButtonText icon={FiArrowLeft} title='Back' />
+                <a>
+                  <ButtonText
+                    icon={FiArrowLeft}
+                    title='Back'
+                    onClick={handleBack}
+                  />
                 </a>
 
-                <ButtonText icon={FiDelete} title='Delete Movie' />
+                <ButtonText
+                  icon={FiDelete}
+                  title='Delete Movie'
+                  onClick={handleRemove}
+                />
               </div>
             </header>
             <section>
