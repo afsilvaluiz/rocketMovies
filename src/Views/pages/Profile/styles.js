@@ -14,7 +14,10 @@ export const Container = styled.div`
 
     padding: 0 7.75rem;
 
-    > a {
+    > button {
+      background: none;
+      border: none;
+
       display: flex;
       align-items: center;
 
