@@ -6,16 +6,11 @@ import { Container } from './styles';
 export function Movies({ data, ...rest }) {
   return (
     <Container {...rest}>
-      <h1>Interestellar</h1>
+      <h1>{data.title}</h1>
 
-      <Stars />
+      <Stars rating={data.rating} />
 
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit corporis
-        nesciunt assumenda quibusdam provident vel cum dolorum, fugiat
-        exercitationem cupiditate neque, at, id facilis nam! Veritatis aperiam
-        debitis at quas.
-      </p>
+      <p>{data.description}</p>
 
       {data.tags && (
         <footer>
