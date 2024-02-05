@@ -58,7 +58,7 @@ export function New() {
     });
 
     alert('Movie added successfully!');
-    navigate('/');
+    navigate(-1);
   }
 
   return (
