@@ -75,7 +75,7 @@ export const Content = styled.div`
 
       p:nth-child(2),
       div {
-        width: 9.985rem;
+        width: 10.985rem;
         height: 1.188rem;
         display: flex;
         align-items: center;
