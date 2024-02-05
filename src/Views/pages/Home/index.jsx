@@ -22,7 +22,7 @@ export function Home() {
     }
 
     fetchNotes();
-  }, [tagsSelected, search]);
+  }, [search, tagsSelected]);
 
   useEffect(() => {
     async function fetchTags() {
