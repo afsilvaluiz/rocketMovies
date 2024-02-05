@@ -8,7 +8,7 @@ import { Input } from '../Input';
 
 import { Container, Profile, Logout } from './styles';
 
-export function Header() {
+export function Header({ ...props }) {
   const { signOut, user } = useAuth();
 
   const avatarUrl = user.avatar
@@ -23,7 +23,12 @@ export function Header() {
         </Link>
       </div>
 
-      <Input type='search' placeholder='Search by title' icon={FiSearch} />
+      <Input
+        type='search'
+        placeholder='Search by title'
+        icon={FiSearch}
+        {...props}
+      />
 
       <Profile>
         <div>
