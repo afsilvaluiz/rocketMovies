@@ -10,11 +10,11 @@ export const Container = styled.ul`
   line-height: 0;
   list-style: none;
 
-  .bg > svg {
-    fill: ${({ theme }) => theme.COLORS.BACKGROUND_700};
-  }
-
   > li > svg {
     color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+  }
+
+  .bg > svg {
+    fill: ${({ theme }) => theme.COLORS.BACKGROUND_700};
   }
 `;
