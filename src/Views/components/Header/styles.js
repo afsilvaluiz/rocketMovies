@@ -39,6 +39,7 @@ export const Profile = styled(Link)`
   > div {
     display: flex;
     flex-direction: column;
+    margin-right: 1.5rem;
     padding-left: 4rem;
     line-height: 1.5rem;
     font-size: 1rem;
