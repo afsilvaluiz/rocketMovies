@@ -30,7 +30,7 @@ export const Profile = styled(Link)`
   display: flex;
   align-items: center;
 
-  > img {
+  > a > img {
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
@@ -39,7 +39,6 @@ export const Profile = styled(Link)`
   > div {
     display: flex;
     flex-direction: column;
-    margin-right: 1rem;
     padding-left: 4rem;
     line-height: 1.5rem;
     font-size: 1rem;

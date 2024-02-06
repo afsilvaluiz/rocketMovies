@@ -35,7 +35,9 @@ export function Header({ ...props }) {
           <strong>{user.name}</strong>
           <Logout onClick={signOut}>Logout</Logout>
         </div>
-        <img src={avatarUrl} alt={user.name} />
+        <Link to='/profile'>
+          <img src={avatarUrl} alt={user.name} />
+        </Link>
       </Profile>
     </Container>
   );
