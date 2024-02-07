@@ -13,7 +13,7 @@ export const Container = styled.div`
   grid-template-rows: 6.563rem auto;
 
   > main {
-    padding: 0 7.6875rem;
+    padding: 0 12.938rem;
     overflow-y: auto;
 
     a {

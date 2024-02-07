@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
-  height: 100hv;
+  height: 100vh;
+  overflow-x: hidden;
 
   display: grid;
   grid-template-areas:
@@ -12,8 +13,8 @@ export const Container = styled.div`
 
   > main {
     grid-area: content;
-    overflow-y: scroll;
-    padding: 2.5rem 7.6875rem;
+    overflow-y: auto;
+    padding: 2.5rem 12.938rem;
   }
 `;
 

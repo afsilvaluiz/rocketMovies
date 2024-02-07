@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Container = styled.header`
@@ -17,7 +16,7 @@ export const Container = styled.header`
   border-bottom: 1px solid ${({ theme }) => theme.COLORS.STROKE};
 
   > div:first-of-type {
-    > a h1 {
+    > h1 {
       font-size: 1.5rem;
       padding-right: 4rem;
 
@@ -26,7 +25,7 @@ export const Container = styled.header`
   }
 `;
 
-export const Profile = styled(Link)`
+export const Profile = styled.div`
   display: flex;
   align-items: center;
 

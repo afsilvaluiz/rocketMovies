@@ -8,7 +8,7 @@ import { Input } from '../Input';
 
 import { Container, Profile, Logout } from './styles';
 
-export function Header({ ...props }) {
+export function Header({ ...rest }) {
   const { signOut, user } = useAuth();
   const navigation = useNavigate();
 
@@ -24,16 +24,14 @@ export function Header({ ...props }) {
   return (
     <Container>
       <div>
-        <Link to='/'>
-          <h1>RocketMovies</h1>
-        </Link>
+        <h1>RocketMovies</h1>
       </div>
 
       <Input
         type='search'
         placeholder='Search by title'
         icon={FiSearch}
-        {...props}
+        {...rest}
       />
 
       <Profile>

@@ -4,6 +4,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   width: 100%;
   height: 100vh;
+  overflow-x: hidden;
 
   display: grid;
   grid-template-rows: 6.563rem auto;
@@ -15,6 +16,7 @@ export const Container = styled.div`
     grid-area: content;
     width: 100%;
     overflow-y: auto;
+    padding: 0 7.688rem;
   }
 
   .myMovie {
@@ -22,7 +24,7 @@ export const Container = styled.div`
     justify-content: space-between;
     align-items: center;
 
-    padding: 3.125rem 7.688rem 2.5rem 7.688rem;
+    padding: 3.125rem 7.588rem 2.5rem 7.588rem;
 
     h1 {
       font-size: 2rem;
@@ -31,10 +33,9 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  grid-area: content;
-  max-width: calc(100% - 1rem);
-
+  max-width: 100%;
   padding: 0 7.688rem;
+  overflow-x: hidden;
 
   color: ${({ theme }) => theme.COLORS.BACKGROUND_600};
 
@@ -59,9 +60,10 @@ export const AddMovie = styled(Link)`
 
   gap: 0.5rem;
 
-  width: 12.938rem;
+  width: 100%;
+  max-width: 12.938rem;
   height: 3rem;
 
-  padding: 2rem;
+  padding: 0.5rem;
   border-radius: 0.5rem;
 `;
