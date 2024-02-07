@@ -32,6 +32,34 @@ export const Container = styled.div`
   }
 `;
 
+export const Menu = styled.div`
+  display: flex;
+  padding: 0 7.588rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+`;
+
+export const Tags = styled.div`
+  font-size: 0.75rem;
+  font-family: 'Roboto', sans-serif;
+
+  display: inline-flex;
+  align-items: center;
+  height: 1.875rem;
+  line-height: 1.9rem;
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  border-radius: 5px;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  color: ${({ theme, $isSelected }) =>
+    $isSelected ? theme.COLORS.BACKGROUND_1000 : theme.COLORS.BACKGROUND_700};
+  background-color: ${({ theme, $isSelected }) =>
+    $isSelected ? theme.COLORS.BACKGROUND_700 : theme.COLORS.BACKGROUND_1000};
+  margin-right: 0.5rem;
+`;
+
 export const Content = styled.div`
   max-width: 100%;
   padding: 0 7.688rem;
