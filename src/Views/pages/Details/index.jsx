@@ -107,7 +107,6 @@ export function Details() {
           </Content>
         </main>
       )}
-      ;
     </Container>
   );
 }
