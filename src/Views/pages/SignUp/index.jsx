@@ -1,12 +1,13 @@
+import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { FiUser, FiMail, FiLock, FiArrowLeft } from 'react-icons/fi';
+import { FiArrowLeft, FiLock, FiMail, FiUser } from 'react-icons/fi';
 import { Link, useNavigate } from 'react-router-dom';
 
 import { api } from '../../../App/services/api';
 import { Button } from '../../components/Button';
 import { Input } from '../../components/Input';
 
-import { Container, Form, Background } from './styles';
+import { Background, Container, Form } from './styles';
 
 export function SignUp() {
   const [name, setName] = useState('');
@@ -36,43 +37,49 @@ export function SignUp() {
   }
 
   return (
-    <Container>
-      <Form>
-        <h1>RocketMovies</h1>
-        <p>Application to keep track of everything you watch</p>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { duration: 1 } }}
+      exit={{ opacity: 0 }}
+    >
+      <Container>
+        <Form>
+          <h1>RocketMovies</h1>
+          <p>Application to keep track of everything you watch</p>
 
-        <h2>Sign Up</h2>
+          <h2>Sign Up</h2>
 
-        <Input
-          placeholder='Name'
-          type='text'
-          icon={FiUser}
-          onChange={(e) => setName(e.target.value)}
-        />
+          <Input
+            placeholder='Name'
+            type='text'
+            icon={FiUser}
+            onChange={(e) => setName(e.target.value)}
+          />
 
-        <Input
-          placeholder='E-mail'
-          type='text'
-          icon={FiMail}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+          <Input
+            placeholder='E-mail'
+            type='text'
+            icon={FiMail}
+            onChange={(e) => setEmail(e.target.value)}
+          />
 
-        <Input
-          placeholder='Password'
-          type='password'
-          icon={FiLock}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+          <Input
+            placeholder='Password'
+            type='password'
+            icon={FiLock}
+            onChange={(e) => setPassword(e.target.value)}
+          />
 
-        <Button title='Sign Up' onClick={handleSignUp} />
+          <Button title='Sign Up' onClick={handleSignUp} />
 
-        <Link to='/'>
-          <FiArrowLeft />
-          Return to login
-        </Link>
-      </Form>
+          <Link to='/'>
+            <FiArrowLeft />
+            Return to login
+          </Link>
+        </Form>
 
-      <Background />
-    </Container>
+        <Background />
+      </Container>
+    </motion.div>
   );
 }
