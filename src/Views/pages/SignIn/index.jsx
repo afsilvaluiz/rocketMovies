@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { FiLock, FiMail } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
@@ -19,33 +20,39 @@ export function SignIn() {
   }
 
   return (
-    <Container>
-      <Form>
-        <h1>RocketMovies</h1>
-        <p>Application to keep track of everything you watch</p>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { duration: 1 } }}
+      exit={{ opacity: 0 }}
+    >
+      <Container>
+        <Form>
+          <h1>RocketMovies</h1>
+          <p>Application to keep track of everything you watch</p>
 
-        <h2>Log in</h2>
+          <h2>Log in</h2>
 
-        <Input
-          placeholder='E-mail'
-          type='text'
-          icon={FiMail}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+          <Input
+            placeholder='E-mail'
+            type='text'
+            icon={FiMail}
+            onChange={(e) => setEmail(e.target.value)}
+          />
 
-        <Input
-          placeholder='Password'
-          type='password'
-          icon={FiLock}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+          <Input
+            placeholder='Password'
+            type='password'
+            icon={FiLock}
+            onChange={(e) => setPassword(e.target.value)}
+          />
 
-        <Button title='Enter' onClick={handleSignIn} />
+          <Button title='Enter' onClick={handleSignIn} />
 
-        <Link to='/register'>Sign Up</Link>
-      </Form>
+          <Link to='/register'>Sign Up</Link>
+        </Form>
 
-      <Background />
-    </Container>
+        <Background />
+      </Container>
+    </motion.div>
   );
 }
