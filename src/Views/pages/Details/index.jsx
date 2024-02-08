@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import moment from 'moment-timezone';
 import { useEffect, useState } from 'react';
 import { FiArrowLeft, FiClock, FiDelete } from 'react-icons/fi';
@@ -53,60 +54,66 @@ export function Details() {
   }, [params.id]);
 
   return (
-    <Container>
-      <Header />
-      {data && (
-        <main>
-          <Content>
-            <header>
-              <div>
-                <a>
-                  <ButtonText
-                    icon={FiArrowLeft}
-                    title='Back'
-                    onClick={handleBack}
-                  />
-                </a>
-
-                <ButtonText
-                  icon={FiDelete}
-                  title='Delete Movie'
-                  onClick={handleRemove}
-                />
-              </div>
-            </header>
-            <section>
-              <div>
-                <h1>{data.title}</h1>
-                <Stars rating={data.rating} />
-              </div>
-
-              <div className='movie-info'>
-                <p>
-                  <img src={avatarUrl} alt={user.name} />
-                  By {user.name}
-                </p>
-
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { duration: 0.45 } }}
+      exit={{ opacity: 0 }}
+    >
+      <Container>
+        <Header />
+        {data && (
+          <main>
+            <Content>
+              <header>
                 <div>
-                  <FiClock />
+                  <a>
+                    <ButtonText
+                      icon={FiArrowLeft}
+                      title='Back'
+                      onClick={handleBack}
+                    />
+                  </a>
 
-                  <p>{formattedDate}</p>
+                  <ButtonText
+                    icon={FiDelete}
+                    title='Delete Movie'
+                    onClick={handleRemove}
+                  />
                 </div>
-              </div>
-            </section>
-            {data.movie_tags && (
-              <div>
-                {data.movie_tags.map((tag) => (
-                  <Tag key={String(tag.id)} title={tag.name} />
-                ))}
-              </div>
-            )}
-            <article>
-              <p>{data.description}</p>
-            </article>
-          </Content>
-        </main>
-      )}
-    </Container>
+              </header>
+              <section>
+                <div>
+                  <h1>{data.title}</h1>
+                  <Stars rating={data.rating} />
+                </div>
+
+                <div className='movie-info'>
+                  <p>
+                    <img src={avatarUrl} alt={user.name} />
+                    By {user.name}
+                  </p>
+
+                  <div>
+                    <FiClock />
+
+                    <p>{formattedDate}</p>
+                  </div>
+                </div>
+              </section>
+              {data.movie_tags && (
+                <div>
+                  {data.movie_tags.map((tag) => (
+                    <Tag key={String(tag.id)} title={tag.name} />
+                  ))}
+                </div>
+              )}
+              <article>
+                <p>{data.description}</p>
+              </article>
+            </Content>
+          </main>
+        )}
+      </Container>
+    </motion.div>
   );
 }
