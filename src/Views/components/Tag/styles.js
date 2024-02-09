@@ -9,7 +9,6 @@ export const Container = styled.span`
   height: 1.875rem;
   line-height: 1.9rem;
   padding: 0.5rem 1rem;
-  margin-top: 0.5rem;
   margin-right: 0.5rem;
   border-radius: 5px;
 
