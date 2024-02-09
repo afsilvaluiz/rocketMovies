@@ -50,6 +50,7 @@ export const Tags = styled.div`
   padding: 0.5rem 1rem;
 
   margin-right: 0.5rem;
+  margin-bottom: 0.5rem
   border-radius: 5px;
   padding: 0.75rem 1rem;
   border-radius: 0.5rem;
