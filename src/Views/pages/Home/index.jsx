@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { FiPlus } from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom';
@@ -54,53 +55,73 @@ export function Home() {
   }, []);
 
   return (
-    <Container>
-      <Header onChange={(e) => setSearch(e.target.value)} />
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { duration: 0.45 } }}
+      exit={{ opacity: 0 }}
+    >
+      <Container>
+        <Header onChange={(e) => setSearch(e.target.value)} />
 
-      <main>
-        <header className='myMovie'>
-          <h1>My Movies</h1>
+        <main>
+          <header className='myMovie'>
+            <h1>My Movies</h1>
+            <AddMovie to='/new'>
+              <motion.div whileHover={{ scale: 0.85 }}>
+                <FiPlus />
+                Movie
+              </motion.div>
+            </AddMovie>
+          </header>
 
-          <AddMovie to='/new'>
-            <FiPlus />
-            Movie
-          </AddMovie>
-        </header>
-
-        <Menu>
-          <Tags
-            key='all'
-            $isSelected={tagsSelected.length === 0}
-            onClick={() => setTagsSelected([])}
-          >
-            All
-          </Tags>
-          {movie_tags
-            .filter(
-              (tag) => tagsSelected.length === 0 || tagsSelected.includes(tag),
-            )
-            .map((tag) => (
-              <Tag
-                key={String(tag.id)}
-                title={tag.name}
-                $isSelected={tagsSelected.includes(tag)}
-                onClick={() => handleSelectTag(tag)}
+          <Menu>
+            <motion.div whileTap={{ scale: 0.85 }}>
+              <Tags
+                key='all'
+                $isSelected={tagsSelected.length === 0}
+                onClick={() => setTagsSelected([])}
               >
-                {tag.name}
-              </Tag>
-            ))}
-        </Menu>
+                All
+              </Tags>
+            </motion.div>
+            {movie_tags
+              .filter(
+                (tag) =>
+                  tagsSelected.length === 0 || tagsSelected.includes(tag),
+              )
+              .map((tag) => (
+                <motion.div key={String(tag.id)} whileHover={{ scale: 0.85 }}>
+                  <Tag
+                    key={String(tag.id)}
+                    title={tag.name}
+                    $isSelected={tagsSelected.includes(tag)}
+                    onClick={() => handleSelectTag(tag)}
+                  >
+                    {tag.name}
+                  </Tag>
+                </motion.div>
+              ))}
+          </Menu>
 
-        <Content>
-          {movie_notes.map((note) => (
-            <Movies
-              key={String(note.id)}
-              data={note}
-              onClick={() => handleDetails(note.id)}
-            />
-          ))}
-        </Content>
-      </main>
-    </Container>
+          <Content>
+            <AnimatePresence>
+              {movie_notes.map((note) => (
+                <motion.div
+                  key={String(note.id)}
+                  layout
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <Movies
+                    key={String(note.id)}
+                    data={note}
+                    onClick={() => handleDetails(note.id)}
+                  />
+                </motion.div>
+              ))}
+            </AnimatePresence>
+          </Content>
+        </main>
+      </Container>
+    </motion.div>
   );
 }
