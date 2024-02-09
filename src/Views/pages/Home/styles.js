@@ -36,6 +36,7 @@ export const Menu = styled.div`
   display: flex;
   padding: 0 7.588rem;
   flex-wrap: wrap;
+  margin-top: 0.5rem;
   margin-bottom: 1.5rem;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -51,7 +52,7 @@ export const Tags = styled.div`
   height: 1.875rem;
   line-height: 1.9rem;
   padding: 0.5rem 1rem;
-  margin-top: 0.5rem;
+
   margin-right: 0.5rem;
   border-radius: 5px;
   padding: 0.75rem 1rem;
