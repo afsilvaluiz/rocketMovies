@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { FiArrowLeft, FiCamera, FiLock, FiMail, FiUser } from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom';
@@ -53,56 +54,62 @@ export function Profile() {
   }
 
   return (
-    <Container>
-      <header>
-        <button type='button' onClick={handleBack}>
-          <FiArrowLeft />
-          Back
-        </button>
-      </header>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { duration: 0.45 } }}
+      exit={{ opacity: 0 }}
+    >
+      <Container>
+        <header>
+          <button type='button' onClick={handleBack}>
+            <FiArrowLeft />
+            Back
+          </button>
+        </header>
 
-      <Form>
-        <Avatar>
-          <img src={avatar} alt='User image' />
-          <label htmlFor='avatar'>
-            <FiCamera />
+        <Form>
+          <Avatar>
+            <img src={avatar} alt='User image' />
+            <label htmlFor='avatar'>
+              <FiCamera />
 
-            <input id='avatar' type='file' onChange={handleChangeAvatar} />
-          </label>
-        </Avatar>
+              <input id='avatar' type='file' onChange={handleChangeAvatar} />
+            </label>
+          </Avatar>
 
-        <Input
-          placeholder='Name'
-          type='text'
-          icon={FiUser}
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
+          <Input
+            placeholder='Name'
+            type='text'
+            icon={FiUser}
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
 
-        <Input
-          placeholder='E-mail'
-          type='text'
-          icon={FiMail}
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+          <Input
+            placeholder='E-mail'
+            type='text'
+            icon={FiMail}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
 
-        <Input
-          placeholder='Current password'
-          type='password'
-          icon={FiLock}
-          onChange={(e) => setPasswordOld(e.target.value)}
-        />
+          <Input
+            placeholder='Current password'
+            type='password'
+            icon={FiLock}
+            onChange={(e) => setPasswordOld(e.target.value)}
+          />
 
-        <Input
-          placeholder='New password'
-          type='password'
-          icon={FiLock}
-          onChange={(e) => setPasswordNew(e.target.value)}
-        />
+          <Input
+            placeholder='New password'
+            type='password'
+            icon={FiLock}
+            onChange={(e) => setPasswordNew(e.target.value)}
+          />
 
-        <Button title='Save' onClick={handleUpdate} />
-      </Form>
-    </Container>
+          <Button title='Save' onClick={handleUpdate} />
+        </Form>
+      </Container>
+    </motion.div>
   );
 }
