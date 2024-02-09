@@ -6,7 +6,7 @@ export const Container = styled.span`
 
   display: -webkit-box;
   -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
 
   display: inline-flex;
   align-items: center;

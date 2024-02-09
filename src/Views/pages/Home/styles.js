@@ -39,7 +39,7 @@ export const Menu = styled.div`
   margin-bottom: 1.5rem;
   display: -webkit-box;
   -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
 `;
 
 export const Tags = styled.div`
