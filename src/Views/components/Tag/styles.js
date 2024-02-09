@@ -4,6 +4,10 @@ export const Container = styled.span`
   font-size: 0.75rem;
   font-family: 'Roboto', sans-serif;
 
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
   display: inline-flex;
   align-items: center;
   height: 1.875rem;
