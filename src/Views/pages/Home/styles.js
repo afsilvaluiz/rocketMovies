@@ -36,11 +36,7 @@ export const Menu = styled.div`
   display: flex;
   padding: 0 7.588rem;
   flex-wrap: wrap;
-  margin-top: 0.5rem;
   margin-bottom: 1.5rem;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: horizontal;
 `;
 
 export const Tags = styled.div`
