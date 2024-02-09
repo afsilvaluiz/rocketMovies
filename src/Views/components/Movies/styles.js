@@ -27,7 +27,6 @@ export const Container = styled.button`
     max-height: 5.3rem;
 
     line-height: 1.9rem;
-
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 2;
