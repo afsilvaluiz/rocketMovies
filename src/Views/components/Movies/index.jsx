@@ -10,10 +10,9 @@ export function Movies({ data, ...rest }) {
     <motion.div
       key={String(data.id)}
       layout
-      animate={{ opacity: 1 }}
+      animate={{ opacity: 1, transition: { duration: 0.3 } }}
       initial={{ opacity: 0 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.3 }}
     >
       <Container {...rest}>
         <h1>{data.title}</h1>
