@@ -21,6 +21,8 @@
   </a>
 </p>
 
+<br>
+
 <p>
   <img src=".github/cover.jpg" alt="cover rocketnotes web" />
 </p>
@@ -38,3 +40,24 @@
  <a href="#-author">Author</a> |
  <a href="#-license">License</a>
 </p>
+
+<br>
+
+## 💻 About
+
+RocketMovies a web application that allows users to record and describe movies they have watched, including titles, descriptions, ratings, and tags.
+
+It also offers profile editing functions, such as changing avatars, names, email addresses, and passwords.
+
+Please note that this project is part of Rocketseat's Explorer course.
+
+<br>
+
+## 🎨 Layout
+
+You can view the project layout via <a href="https://www.figma.com/file/9gj9cdzueXdwEd41RcgG7o/RocketMovies-(Copy)-(Copy)?type=design&node-id=0-1&mode=design&t=NNmua1GZD9bjpLmj-0" target="_blank">link</a>.
+
+<img title="SignUp" src=".github/SignIn.jpg" width="30%"></img> <img title="SignIn" src=".github/SignUp.jpg" width="30%"></img> <img title="Profile" src=".github/Profiles.jpg" width="30%"></img>
+
+<img title="Home" src=".github/Home.jpg" width="30%"></img>  <img title="Create Movie" src=".github/CreateMovie.jpg" width="30%"></img> <img title="Note Preview" src=".github/MoviePreview.jpg" width="30%"></img>
+
