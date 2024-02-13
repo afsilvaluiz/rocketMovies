@@ -67,7 +67,82 @@ You can view the project layout via <a href="https://www.figma.com/file/9gj9cdzu
 
 To access the application's website deployment, click on the following link: [Link](https://minerocketmovies.netlify.app/)
 
-> Note: the application may take a while to start running after a while, due to the back-end running through the free plan on the hosting platform.
+> Note: the application may take a while to start running after a while, due to the backend running through the free plan on the hosting platform.
 
 <br>
 
+## 🧰 How it works
+
+This project contains a Frontend (ReactJS) and Backend (NodeJS) part, however, this repository only contains the Frontend Web part, to access the Backend repository go to the following <a href="https://github.com/afsilvaluiz/rocketMovies-api" target="_blank">link</a>.
+
+> Note: and don't forget that you also need to run the application's backend to fetch and check the necessary data
+
+#### ⏳ Running the web application (Backend)
+
+```bash
+# Clone this repository
+$ git clone git@github.com:afsilvaluiz/rocketMovies-api.git
+
+# Go to the Backend application folder
+$ cd rocketMovies-api
+
+# Install the dependencies
+$ npm install
+
+# Run the migrations
+$ npm run migrate:dev
+
+# Run the application in development mode
+$ npm run dev
+
+# Run tests (if desired)
+$ npm test
+
+# The application will be opened on a port specified in the run terminal
+```
+
+#### 🧭 Running the web application (Frontend)
+
+```bash
+# Clone this repository
+$ git clone git@github.com:afsilvaluiz/rocketMovies.git
+
+# Go to the Frontend application folder
+$ cd rocketMovies
+
+# Install the dependencies
+$ npm install
+
+# Run the application in development mode
+$ npm run dev
+
+# The application will be opened on a port specified in the run terminal
+```
+<br>
+
+## 🛠 Technologies
+
+The following tools were used to build the project:
+
+#### *Website* ([Vite](https://vitejs.dev/)  +  [React](https://react.dev/))
+
+-   *[Styled-Components](https://styled-components.com/)*
+-   *[React-Query](https://react-query-v3.tanstack.com/)*
+-   *[React-Icons](https://react-icons.github.io/react-icons/)*
+-   *[React-Router-DOM](https://reactrouter.com/en/main/start/tutorial)*
+-   *[Framer-Motion](https://www.framer.com/motion/)*
+
+> For more details on the application's general dependencies, see the file [package.json](https://github.com/afsilvaluiz/rocketMovies/blob/main/package.json).
+
+<br>
+
+## 🧑🏻‍💻 Author
+
+ <img alt="Github" title="Github" src="https://github.com/afsilvaluiz.png" width="100px" >
+
+
+## 📝 License
+
+This project is under the MIT license. See the [LICENSE](./LICENSE) file for more information
+
+Made with 🎓 by Luiz Silva 🧑🏻‍💻
