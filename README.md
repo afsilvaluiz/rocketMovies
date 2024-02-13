@@ -61,3 +61,13 @@ You can view the project layout via <a href="https://www.figma.com/file/9gj9cdzu
 
 <img title="Home" src=".github/Home.jpg" width="30%"></img>  <img title="Create Movie" src=".github/CreateMovie.jpg" width="30%"></img> <img title="Note Preview" src=".github/MoviePreview.jpg" width="30%"></img>
 
+<br>
+
+## 🔗 Deploy
+
+To access the application's website deployment, click on the following link: [Link](https://minerocketmovies.netlify.app/)
+
+> Note: the application may take a while to start running after a while, due to the back-end running through the free plan on the hosting platform.
+
+<br>
+
